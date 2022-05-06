@@ -23,12 +23,13 @@ public class App {
 				break;
 			}
 			case 2: {
-				
+				login();
 
 				break;
 			}
 			case 3: {
 				response = false;
+				System.out.println("Thank you !\nSTAY ANYWHERE BE SAFE !");
 				break;
 			}
 
@@ -79,8 +80,7 @@ public class App {
 		String choice = dao.doLogin(userID, userPassword);
 		switch (choice) {
 		case "false":
-			System.out.println("Opps Not Found !");
-
+			System.out.println("Opps Not Found !\nPlease Check input");
 			break;
 		case "employee":
 			forEmployee(userID);
@@ -148,7 +148,7 @@ public class App {
 
 	public static void leaveResponse() {
 		System.out.println(
-				"\nPress 1 \nFor response all LeaveStatus to specified Employee ? \n2-> Response to particular date for Employee?");
+				"\nPress \n 1-> For response all LeaveStatus to specified Employee ? \n 2-> Response to particular date for Employee?");
 		int response = input.nextInt();
 		String query;
 		System.out.println("Enter EmployeeID?");
